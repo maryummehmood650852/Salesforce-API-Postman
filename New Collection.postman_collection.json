@@ -1,0 +1,262 @@
+{
+  "info": {
+    "_postman_id": "71db52e4-4729-4026-9869-04c5f7e61045",
+    "name": "New Collection",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "58007563",
+    "_collection_link": "https://go.postman.co/collection/58007563-71db52e4-4729-4026-9869-04c5f7e61045?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "New Request",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "grant_type",
+              "type": "text",
+              "uuid": "283a81d8-1fab-4036-b106-bfaca47af32d",
+              "value": "client_credentials"
+            },
+            {
+              "key": "client_id",
+              "type": "text",
+              "uuid": "cc61c162-625c-4835-a5ad-4dd99de3bbae",
+              "value": "{{salesforce_consumer_key_1e0e}}"
+            },
+            {
+              "key": "client_secret",
+              "type": "text",
+              "uuid": "1219e4f9-7cec-4ec6-b863-9dcdd8a98891",
+              "value": "8E9B088899448841C1B31A3465F5E281B30043E796339637373B6658ED9040B0"
+            }
+          ]
+        },
+        "url": {
+          "raw": "https://playful-badger-at8wqp-dev-ed.trailblaze.my.salesforce.com/services/oauth2/token",
+          "protocol": "https",
+          "host": [
+            "playful-badger-at8wqp-dev-ed",
+            "trailblaze",
+            "my",
+            "salesforce",
+            "com"
+          ],
+          "path": [
+            "services",
+            "oauth2",
+            "token"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "New Request",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{auth_secret_05j5}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{salesforce_access_token_10uj}}"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"NAME\":\"MARYUM MEHMOOD\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://playful-badger-at8wqp-dev-ed.trailblaze.my.salesforce.com/services/data/v60.0/sobjects/Account",
+          "protocol": "https",
+          "host": [
+            "playful-badger-at8wqp-dev-ed",
+            "trailblaze",
+            "my",
+            "salesforce",
+            "com"
+          ],
+          "path": [
+            "services",
+            "data",
+            "v60.0",
+            "sobjects",
+            "Account"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "New Request",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{salesforce_access_token_0smo}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://playful-badger-at8wqp-dev-ed.trailblaze.my.salesforce.com/services/data/v60.0/sobjects/Account/001g500000gIh4kAAC",
+          "protocol": "https",
+          "host": [
+            "playful-badger-at8wqp-dev-ed",
+            "trailblaze",
+            "my",
+            "salesforce",
+            "com"
+          ],
+          "path": [
+            "services",
+            "data",
+            "v60.0",
+            "sobjects",
+            "Account",
+            "001g500000gIh4kAAC"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "New Request",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{auth_secret_05j5}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"Phone\": \"03001234567\",\r\n  \"Website\": \"://maryum.com\",\r\n  \"Description\": \"update will be successfully.\"\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://playful-badger-at8wqp-dev-ed.trailblaze.my.salesforce.com/services/data/v60.0/sobjects/Account/001g500000g8NCYAA2",
+          "protocol": "https",
+          "host": [
+            "playful-badger-at8wqp-dev-ed",
+            "trailblaze",
+            "my",
+            "salesforce",
+            "com"
+          ],
+          "path": [
+            "services",
+            "data",
+            "v60.0",
+            "sobjects",
+            "Account",
+            "001g500000g8NCYAA2"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "New Request",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{salesforce_access_token_05j5}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "https://playful-badger-at8wqp-dev-ed.trailblaze.my.salesforce.com/services/data/v60.0/sobjects/Account/001g500000g8VoEAAU",
+          "protocol": "https",
+          "host": [
+            "playful-badger-at8wqp-dev-ed",
+            "trailblaze",
+            "my",
+            "salesforce",
+            "com"
+          ],
+          "path": [
+            "services",
+            "data",
+            "v60.0",
+            "sobjects",
+            "Account",
+            "001g500000g8VoEAAU"
+          ]
+        }
+      },
+      "response": []
+    }
+  ],
+  "variable": [
+    {
+      "key": "salesforce_consumer_key_0jx5",
+      "secret": true
+    },
+    {
+      "key": "salesforce_consumer_key_1e0e",
+      "secret": true
+    },
+    {
+      "key": "auth_secret_05j5",
+      "secret": true
+    },
+    {
+      "key": "salesforce_access_token_10uj",
+      "secret": true
+    },
+    {
+      "key": "bearer_token_19zk",
+      "secret": true
+    },
+    {
+      "key": "salesforce_access_token_05j5",
+      "secret": true
+    },
+    {
+      "key": "salesforce_access_token_07lw",
+      "secret": true
+    },
+    {
+      "key": "salesforce_access_token_0smo",
+      "secret": true
+    }
+  ]
+}
